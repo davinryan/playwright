@@ -4,7 +4,7 @@ import {Buffer} from 'node:buffer'
 
 // tslint:disable:no-console
 
-setDefaultTimeout(1800000)
+setDefaultTimeout(30000)
 
 // tslint:disable:only-arrow-functions
 

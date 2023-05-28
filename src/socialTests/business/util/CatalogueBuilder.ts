@@ -1,50 +1,49 @@
-import { SomeFixture } from "./SomeFixture";
+import {SomeFixture} from './SomeFixture'
 
 class CatalogueBuilder {
-  private response: any;
-  private someFixture: SomeFixture;
+  private response: any
+  private someFixture: SomeFixture
 
   static make = (): CatalogueBuilder => {
-    return new CatalogueBuilder();
-  };
+    return new CatalogueBuilder()
+  }
 
   private constructor(someFixture: SomeFixture = new SomeFixture()) {
-    this.someFixture = someFixture;
+    this.someFixture = someFixture
     this.response = {
       total: 0,
       page: 1,
       limit: 200,
       data: [],
-    };
+    }
   }
 
-  addGroup(group?: any): CatalogueBuilder {
+  addItem(id: string, name: string, value: number, currency: string,  description: string, quantity: number): CatalogueBuilder {
     this.response.data = [
       ...this.response.data,
       {
-        seqGroupId: this.someFixture.someUniqueNumber(),
-        groupId: this.someFixture.someString("300125_P"),
-        groupName: this.someFixture.someString("ZWS T XBNZ PVTBMHJWGLXC"),
-        levelCode: "2",
-        levelDescription: "Super Group",
-        parentGroupId: null,
-        activeIndicator: "Y",
-        stopNewPoliciesIndicator: "N",
-        allowAdultDependencyIndicator: "Y",
-        healthConnectIndicator: "N",
-        healthConnectColour: null,
-        healthConnectGroupStartDate: null,
-        healthConnectGroupEndDate: null,
-        ...group,
+        id,
+        name,
+        price: {
+          value,
+          currency
+        },
+        description,
+        quantity
       },
-    ];
-    this.response.total = this.response.total + 1;
-    return this;
+    ]
+    this.response.total = this.response.total + 1
+    return this
   }
 
   build() {
-    return this.response;
+    return this.response
+  }
+
+  hasServer500Error() {
+    this.response = "Catalogue list unavailable"
+    return this
   }
 }
 
-export { CatalogueBuilder };
+export {CatalogueBuilder}

@@ -1,9 +1,11 @@
 import {useEffect, useState} from 'react'
 import {CatalogueItems} from '../../components/catalogueItems'
 import {CatalogueItemType} from '../../components/catalogueItem.types'
+import {PurchaseSummary} from '../../components/purchaseSummary'
 
 const Catalogue = () => {
   const [items, setItems] = useState([])
+  const [purchasedItems, setPurchasedItems] = useState([])
 
   const getItems = async () => {
     try {
@@ -16,6 +18,10 @@ const Catalogue = () => {
     }
   }
 
+  const purchaseItem = (item: CatalogueItemType) => {
+    setPurchasedItems([...purchasedItems, item])
+  }
+
   useEffect(() => {
     getItems().then((items: CatalogueItemType[]) => {
       setItems(items)
@@ -23,7 +29,8 @@ const Catalogue = () => {
   }, [])
   return (
     <div>
-      <CatalogueItems items={items}/>
+      <CatalogueItems items={items} purchaseItem={purchaseItem} />
+      <PurchaseSummary items={purchasedItems}/>
     </div>
   )
 }

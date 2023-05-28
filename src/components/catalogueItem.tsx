@@ -1,6 +1,6 @@
 import {CatalogueItemType} from './catalogueItem.types'
 
-const CatalogueItem = (props: { item: CatalogueItemType }) => {
+const CatalogueItem = (props: { item: CatalogueItemType, purchaseItem: (item: CatalogueItemType) => void }) => {
   const {item} = props
   return (
     <li>
@@ -37,6 +37,9 @@ const CatalogueItem = (props: { item: CatalogueItemType }) => {
             <td>
               {item.quantity}
             </td>
+          </tr>
+          <tr>
+            <td><button onClick={() => props.purchaseItem(item)}>Purchase</button></td>
           </tr>
         </tbody>
       </table>

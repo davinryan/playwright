@@ -1,0 +1,9 @@
+{
+  "ext": "ts",
+  "verbose": true,
+  "ignore": [
+    "src/socialTests/**",
+    "docs"
+  ],
+  "exec": "node --inspect --require ts-node/register src/mock.services.start.ts"
+}

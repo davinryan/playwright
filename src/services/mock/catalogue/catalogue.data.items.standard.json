@@ -1,0 +1,38 @@
+{
+  "total": 10,
+  "page": 1,
+  "limit": 200,
+  "data": [
+    {
+      "name": "Shoe",
+      "price": {
+        "value": 150,
+        "currency": "NZD"
+      },
+      "description": "They go on your feet",
+      "quality": 10,
+      "attributes": [
+        {
+          "size": 11,
+          "style": "sports"
+        }
+      ]
+    },
+    {
+      "name": "USB Key",
+      "price": {
+        "value": 150,
+        "currency": "NZD"
+      },
+      "description": "They go on your feet",
+      "quality": 10,
+      "attributes": [
+        {
+          "size": "256GB",
+          "writeSpeed": "1 MB/s",
+          "readSpeed": "1 MB/s"
+        }
+      ]
+    }
+  ]
+}

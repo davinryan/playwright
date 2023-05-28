@@ -1,0 +1,13 @@
+{
+  "extends": ["ts-react-important-stuff", "plugin:prettier/recommended"],
+  "rules": {
+    "no-console": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "parser": "@babel/eslint-parser"
+}

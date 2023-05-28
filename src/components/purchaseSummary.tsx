@@ -7,7 +7,7 @@ const PurchaseSummary = (props: { items: CatalogueItemType[] }) => {
       <h2>Purchased Items</h2>
       <ul>
         {props.items.map((item: CatalogueItemType) => (
-          <PurchasedItem item={item} key={`${item.name}${Math.random() * 1000}`}/>)
+          <PurchasedItem item={item} key={`${item.id}${Math.random() * 1000}`}/>)
         )}
       </ul>
     </div>

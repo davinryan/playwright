@@ -7,7 +7,7 @@ const CatalogueItems = (props: { items: CatalogueItemType[], purchaseItem: (item
       <h2>Our Catalogue</h2>
       <ul>
         {props.items.map((item: CatalogueItemType) => (
-          <CatalogueItem item={item} key={item.name} purchaseItem={props.purchaseItem}/>)
+          <CatalogueItem item={item} key={item.id} purchaseItem={props.purchaseItem}/>)
         )}
       </ul>
     </div>

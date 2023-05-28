@@ -8,10 +8,7 @@ const PurchasedItem = (props: { item: CatalogueItemType }) => {
         <tbody>
         <tr>
           <td>
-            <b>Item:</b>
-          </td>
-          <td>
-            {item.name}
+            <span data-testid={`purchasedItem_${item.id}`}>You have purchased '{item.name}'</span>
           </td>
         </tr>
         </tbody>

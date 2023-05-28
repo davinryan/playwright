@@ -39,7 +39,7 @@ const CatalogueItem = (props: { item: CatalogueItemType, purchaseItem: (item: Ca
             </td>
           </tr>
           <tr>
-            <td><button onClick={() => props.purchaseItem(item)}>Purchase</button></td>
+            <td><button data-testid={`catalogueItem_purchase_${item.id}`} onClick={() => props.purchaseItem(item)}>Purchase</button></td>
           </tr>
         </tbody>
       </table>

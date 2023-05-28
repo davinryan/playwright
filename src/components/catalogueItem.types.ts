@@ -1,4 +1,5 @@
 interface CatalogueItemType {
+  id: string;
   name: string;
   price: {
     value: number;

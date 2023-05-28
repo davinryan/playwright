@@ -4,6 +4,7 @@
   "limit": 200,
   "data": [
     {
+      "id": "1",
       "name": "Graphics Card",
       "price": {
         "value": 150,
@@ -19,6 +20,7 @@
       ]
     },
     {
+      "id": "2",
       "name": "USB Key",
       "price": {
         "value": 50,
@@ -35,6 +37,7 @@
       ]
     },
     {
+      "id": "3",
       "name": "Keyboard & Mouse",
       "price": {
         "value": 150,

@@ -4,33 +4,48 @@
   "limit": 200,
   "data": [
     {
-      "name": "Shoe",
+      "name": "Graphics Card",
       "price": {
         "value": 150,
         "currency": "NZD"
       },
-      "description": "They go on your feet",
-      "quality": 10,
+      "description": "Make games better or possible",
+      "quantity": 10,
       "attributes": [
         {
-          "size": 11,
-          "style": "sports"
+          "memory": "256GB",
+          "model": "Elite"
         }
       ]
     },
     {
       "name": "USB Key",
       "price": {
-        "value": 150,
+        "value": 50,
         "currency": "NZD"
       },
-      "description": "They go on your feet",
-      "quality": 10,
+      "description": "Store your stuff",
+      "quantity": 5,
       "attributes": [
         {
           "size": "256GB",
           "writeSpeed": "1 MB/s",
           "readSpeed": "1 MB/s"
+        }
+      ]
+    },
+    {
+      "name": "Keyboard & Mouse",
+      "price": {
+        "value": 150,
+        "currency": "NZD"
+      },
+      "description": "Ensures you're still the boss",
+      "quantity": 15,
+      "attributes": [
+        {
+          "style": "Ergonomic",
+          "bluetooth": true
         }
       ]
     }

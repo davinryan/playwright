@@ -12,7 +12,6 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
-    "prepare": "husky install",
     "coverage": "cross-env BABEL_ENV=test jest --coverage",
     "build:types": "tsc",
     "test": "concurrently npm:test:*",
